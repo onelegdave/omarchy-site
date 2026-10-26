@@ -116,3 +116,7 @@ English changes publish immediately. GitHub Actions fills in missing main-site c
 ## AI assistance
 
 Codex assisted with dependency maintenance and verification in this fork.
+
+This fork runs the site's read-only checks. Upstream publishing, translation,
+catalogue refresh and Discord synchronization jobs are restricted to the upstream
+repository, so synchronizing this source does not activate those services here.

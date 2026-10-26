@@ -46,7 +46,7 @@ jobs:
           include-hidden-files: true
 
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.repository == 'omacom/omarchy-site' && github.event_name != 'pull_request'
     needs: check
     runs-on: ubuntu-latest
     permissions:
@@ -68,7 +68,7 @@ jobs:
   # outage does not hold omarchy.cn back.
   # ref: https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow
   deploy-cn:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
+    if: github.repository == 'omacom/omarchy-site' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master'
     needs: check
     runs-on: ubuntu-latest
     permissions:

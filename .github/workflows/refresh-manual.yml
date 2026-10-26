@@ -33,6 +33,7 @@ concurrency:
 
 jobs:
   refresh:
+    if: github.repository == 'omacom/omarchy-site'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 

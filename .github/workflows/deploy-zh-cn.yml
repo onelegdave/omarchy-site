@@ -37,6 +37,7 @@ env:
 
 jobs:
   build:
+    if: github.repository == 'omacom/omarchy-site'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -86,6 +87,7 @@ jobs:
     # Manual runs on master deploy too: translate-news.yml starts one after it
     # commits translations, since its own push cannot trigger this workflow.
     if: >-
+      github.repository == 'omacom/omarchy-site' &&
       vars.OMARCHY_CN_OSS_HOST != '' &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
       github.ref == 'refs/heads/master'
