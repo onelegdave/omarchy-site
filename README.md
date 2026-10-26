@@ -111,3 +111,7 @@ which has its own submission guide.
 
 The site uses shared components with separate language catalogues and domain builds.
 English changes publish immediately. GitHub Actions fills in missing main-site copy and news translations with Muse afterward, then deploys the language sites. Existing human translations are preserved. See [the translation guide](docs/translations.md) for queues, local previews, and adding a language or domain.
+
+## AI assistance
+
+Codex assisted with dependency maintenance and verification in this fork.
